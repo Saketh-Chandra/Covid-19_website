@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>New Cases</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {packages: ['corechart', 'line']});
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Date');
+            data.addColumn('number', 'Confirmed');
+            data.addColumn('number', 'Recovered');
+            data.addColumn('number', 'Deaths');
+
+
+            new_index = JSON.parse({{ index | tojson }})
+            new_data_c = JSON.parse({{ data_c | tojson }})
+            new_data_r = JSON.parse({{ data_r | tojson }})
+            new_data_d = JSON.parse({{ data_d | tojson }})
+
+
+            for (var i = 0; i < new_index.length; i++)
+            {
+                data.addRow([new Date(new_index[i]), (new_data_c[i]), (new_data_r[i]), (new_data_d[i])])
+            }
+
+            var options = {
+                hAxis: {
+                    title: 'Time Line'
+                },
+                vAxis: {
+                    title: 'No of New Cases - old Cases'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+        }
+    </script>
+{% endblock %}
+
+
+{% block body %}
+    <h1>hello world!</h1>
+    <div id="chart_div" style="width: 1500px; height: 1000px"></div>
+
+
+{% endblock %}

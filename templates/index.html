@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {packages: ['corechart', 'line']});
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Date');
+            data.addColumn('number', 'Confirmed');
+            data.addColumn('number', 'Recovered');
+            data.addColumn('number', 'Deaths');
+
+            in_index = JSON.parse({{ in_list_index | tojson }})
+            in_data_c = JSON.parse({{ in_list_data_c | tojson }})
+
+            in_data_r = JSON.parse({{ in_list_data_r | tojson }})
+            in_data_d = JSON.parse({{ in_list_data_d | tojson }})
+
+            // console.log(in_data_d);
+            for (var i = 0; i < in_index.length; i++) {
+                data.addRow([new Date(in_index[i]), in_data_c[i], in_data_r[i], in_data_d[i]])
+            }
+
+            var options = {
+                hAxis: {
+                    title: 'Time Line'
+                },
+                vAxis: {
+                    title: 'No of Cases'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+        }
+    </script>
+{% endblock %}
+
+
+{% block body %}
+
+
+    <!--div class="card">
+        <div id="chart_div" style="width: 1500px; height: 1000px"></div>
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div-->
+
+    <div class="card">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <div id="chart_div" style="width: 1500px; height: 500px"></div>
+        </div>
+    </div>
+
+
+{% endblock %}
