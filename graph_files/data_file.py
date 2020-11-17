@@ -75,6 +75,43 @@ def new_cases_c(Country, State=''):
     return index[1:], new_c, new_r, new_d
 
 
+def list_of_country_state():
+    df = pd.read_csv(
+        'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv')
+    df = df.replace(np.nan, '', regex=True)
+    data = df[['Country/Region', 'Province/State']]
+    data = np.array(data)
+    return data
+
+
+def data_of_world_wide():
+    dfC = pd.read_csv(
+        'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv')
+
+    dfC = dfC.replace(np.nan, '', regex=True)
+
+    dfR = pd.read_csv(
+        'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv')
+    dfR = dfR.replace(np.nan, '', regex=True)
+
+    new = list(dfC.head())[-1]
+    co = list(dfC.head(0))[1]
+    print(co, new)
+    dC = dfC[[co, new]]
+    dR = dfR[[co, new]]
+
+    dC = dC.groupby([co]).sum()
+    dR = dR.groupby([co]).sum()
+
+    dC = dC.rename(columns={new: 'Confirmed'})
+    dR = dR.rename(columns={new: 'Recovered'})
+
+    dCR = pd.merge(dC, dR, how='outer', on='Country/Region')
+    dCR.insert(0, "Country", dCR.index)
+    return dCR.values.tolist()
+
+
+# print(data_of_world_wide())
 """"
 
 if __name__=='__main__':

@@ -57,11 +57,20 @@
 
     <div class="card">
         <div class="card-header">
-            Featured
+            Graph of {{ Country }}, {{ State }}
         </div>
         <div class="card-body">
-            <div id="chart_div" style="width: 1500px; height: 500px"></div>
+            <div id="chart_div" style="height: 500px"></div>
         </div>
+    </div>
+    <div>
+        <a type="button" class="btn btn-outline-primary" href="{{ url_for('new_home', Country=Country, State=State) }}">New
+            cases graph</a>
+        <br>
+        <br>
+        <a type="button" class="btn btn-outline-primary" href="{{ url_for('world_wide') }}">Open world wide map</a>
+        <a type="button" class="btn btn-outline-primary"
+           href="{{ url_for('home_api', Country=Country, State=State) }}">to view API</a>
     </div>
 
 
