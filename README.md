@@ -1,9 +1,5 @@
 # A Covid-19 website
-### still under development
-A basic website for Covid-19 and free api with telegram bot integration!
-# This is a test website made with Flask and Bootstrap
-
-This a sample web application, using the [Flask](http://flask.pocoo.org/) web application framework.
+A basic website for Covid-19 dashboard using the [Flask](http://flask.pocoo.org/) web application framework and providing free api with telegram bot integration!
 
 ## [Thanks for CSSEGISandData for providing COVID-19 Data Repository](https://github.com/CSSEGISandData/COVID-19)
 
