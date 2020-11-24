@@ -55,5 +55,4 @@ Report [here](https://github.com/Saketh-Chandra/Covid-19_website/issues/new) in 
 
 Check [here](https://github.com/Saketh-Chandra/Covid-19_website/graphs/contributors) for the list of contributors. Contact one of them through their profiles.
 
-
 ## Have a great time!!!
