@@ -1,19 +1,20 @@
 # A Covid-19 website
 ### still under development
 A basic website for Covid-19 and free api with telegram bot integration!
-<!--
 # This is a test website made with Flask and Bootstrap
 
 This a sample web application, using the [Flask](http://flask.pocoo.org/) web application framework.
 
+## [Thanks for CSSEGISandData for providing COVID-19 Data Repository](https://github.com/CSSEGISandData/COVID-19)
+
 A running instance of it can be found at " 
-[https://a-test-website.herokuapp.com/](https://a-test-website.herokuapp.com/) ".
+[https://covid-19--project.herokuapp.com/](https://covid-19--project.herokuapp.com/) ".
 
 # :book: How to use the repository?
 ## Setup
 ```bash
-git clone https://github.com/Saketh-Chandra/flask_basic.git
-cd flask_basic
+https://github.com/Saketh-Chandra/Covid-19_website.git
+cd Covid-19_website
 pip install -r requirements.txt
 python app.py
 ```
@@ -42,11 +43,11 @@ Please read [Prerequisite](Prerequisite.md) file for details.
 
 # :scroll: Changelog
 
-Check the [changelog here](https://github.com/Saketh-Chandra/flask_basic/commits/master).
+Check the [changelog here](https://github.com/Saketh-Chandra/Covid-19_website/commits/master).
 
 # :scroll: I found some bugs or issues. Where do I report?
 
-Report [here](https://github.com/Saketh-Chandra/flask_basic/issues/new) in detail answering these questions:
+Report [here](https://github.com/Saketh-Chandra/Covid-19_website/issues/new) in detail answering these questions:
 
 * What steps did you take to make the bug appear?
 * How can the bug be fixed? (In case you know)
@@ -56,7 +57,7 @@ Report [here](https://github.com/Saketh-Chandra/flask_basic/issues/new) in detai
 
 # :scroll: How do I contact the team?
 
-Check [here](https://github.com/Saketh-Chandra/flask_basic/graphs/contributors) for the list of contributors. Contact one of them through their profiles.
+Check [here](https://github.com/Saketh-Chandra/Covid-19_website/graphs/contributors) for the list of contributors. Contact one of them through their profiles.
+
 
 ## Have a great time!!!
--->
