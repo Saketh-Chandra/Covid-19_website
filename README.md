@@ -9,7 +9,7 @@ A running instance of it can be found at "
 # :book: How to use the repository?
 ## Setup
 ```bash
-https://github.com/Saketh-Chandra/Covid-19_website.git
+git clone https://github.com/Saketh-Chandra/Covid-19_website.git
 cd Covid-19_website
 pip install -r requirements.txt
 python app.py
