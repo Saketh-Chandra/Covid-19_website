@@ -45,8 +45,8 @@ of deaths from authenticated and reliable sources like World Health Organization
 European Centre for Disease Prevention and Control (ECDC) etc. 
 ## [Thanks for CSSEGISandData for providing COVID-19 Data Repository](https://github.com/CSSEGISandData/COVID-19)
 
-## A running instance of it can be found at " 
-[https://covid-19--project.herokuapp.com/](https://covid-19--project.herokuapp.com/) ".
+## A running instance of it can be found at
+"[https://covid-19--project.herokuapp.com/](https://covid-19--project.herokuapp.com/) ".
 
 
 ## The framework used: Flask
