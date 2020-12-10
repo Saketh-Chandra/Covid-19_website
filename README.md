@@ -61,7 +61,8 @@ supports extensions that can add application features.
 git clone https://github.com/Saketh-Chandra/Covid-19_website.git
 cd Covid-19_website
 pip install -r requirements.txt
-python app.py
+set FLASK_APP=app.py
+flask run 
 ```
 ### Telegram Bot info:
 #### you can get information using Telegram Bot!
