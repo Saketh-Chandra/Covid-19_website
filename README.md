@@ -67,8 +67,8 @@ flask run
 ## Docker Build
 ```bash
 wget "https://raw.githubusercontent.com/Saketh-Chandra/Covid-19_website/master/Dockerfile"
-docker build -t Covid-19_website
-docker run -p 80:5000 Covid-19_website
+docker build -t covid_19_website .
+docker run -p 80:5000 covid_19_website
 ```
 
 
