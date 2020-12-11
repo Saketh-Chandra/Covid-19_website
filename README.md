@@ -64,6 +64,14 @@ pip install -r requirements.txt
 set FLASK_APP=app.py
 flask run 
 ```
+## Docker Build
+```bash
+docker build -t Covid-19_website
+docker run -p 80:5000 Covid-19_website
+```
+
+
+
 ### Telegram Bot info:
 #### you can get information using Telegram Bot!
 ##### Username: @The_Covid19_Bot
