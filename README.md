@@ -1,5 +1,7 @@
 ![Covid-19 png](https://www.leaders-in-law.com/wp-content/uploads/2020/03/COVID-19.png)
 
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Saketh-Chandra/Covid-19_website)
 # A Covid-19 website
 A basic website for Covid-19 dashboard using the [Flask](http://flask.pocoo.org/) web application framework and providing free api with telegram bot integration!
 ## Covid-19 
