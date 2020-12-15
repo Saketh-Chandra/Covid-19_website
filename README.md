@@ -64,11 +64,11 @@ pip install -r requirements.txt
 set FLASK_APP=app.py
 flask run 
 ```
-## Docker Build :whale:
+##  :whale: Docker Build
 ```bash
 wget "https://raw.githubusercontent.com/Saketh-Chandra/Covid-19_website/master/Dockerfile"
 docker build -t covid_19_website .
-docker run -p 80:5000 covid_19_website
+docker run -p 80:5000 -e port=5000 covid_19_website
 ```
 
 
