@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['geochart'],
+            // Note: you will need to get a mapsApiKey for your project.
+            // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+            'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            var list_data_js = JSON.parse({{ list_data | tojson }})
+            var data = google.visualization.arrayToDataTable(list_data_js);
+
+            var options = {
+                colorAxis: {colors: ['#DCDCDC', 'green', '#B22222', '#F0E68C', 'red']}
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+            chart.draw(data, options);
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+    <div class="card">
+        <div class="card-header">
+            World Wide data!
+        </div>
+        <div class="card-body">
+            <div id="regions_div"></div>
+        </div>
+    </div>
+    <div class="container">
+        <a type="button" class="btn btn-outline-primary"
+           href="{{ url_for('index1') }}">GoTo Home</a>
+    </div>
+{% endblock %}

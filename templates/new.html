@@ -22,8 +22,7 @@
             new_data_d = JSON.parse({{ data_d | tojson }})
 
 
-            for (var i = 0; i < new_index.length; i++)
-            {
+            for (var i = 0; i < new_index.length; i++) {
                 data.addRow([new Date(new_index[i]), (new_data_c[i]), (new_data_r[i]), (new_data_d[i])])
             }
 
@@ -45,8 +44,24 @@
 
 
 {% block body %}
-    <h1>hello world!</h1>
-    <div id="chart_div" style="width: 1500px; height: 1000px"></div>
-
+    {#    <h1>hello world!</h1>#}
+    {#    <div id="chart_div" style="width: 1500px; height: 1000px"></div>#}
+    <div class="card">
+        <div class="card-header">
+            Graph of {{ Country }}, {{ State }}
+        </div>
+        <div class="card-body">
+            <div id="chart_div" style="width: 1000px; height: 500px"></div>
+        </div>
+    </div>
+    <div>
+        <a type="button" class="btn btn-outline-primary"
+           href="{{ url_for('home_view', Country=Country, State=State) }}">New cases graph</a>
+        <br>
+        <br>
+        <a type="button" class="btn btn-outline-primary" href="{{ url_for('world_wide') }}">Open world wide map</a>
+        <a type="button" class="btn btn-outline-primary"
+           href="{{ url_for('home_api', Country=Country, State=State) }}">to view API</a>
+    </div>
 
 {% endblock %}
