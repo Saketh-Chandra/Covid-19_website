@@ -4,9 +4,10 @@
     <style>
         body {
             background-image: url({{ url_for('static', filename='images/background.png') }});
+            background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: 100% 100%;
+            background-size: cover;
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,17 +81,18 @@
     <br>
     <br>
     <!--Make sure the form has the autocomplete function switched off:-->
-    <form autocomplete="off" action="{{ url_for('index2') }}" method="POST">
-        <div class="autocomplete" style="width:300px;">
-            <input id="myInput" type="text" name="country" placeholder="Enter the Country/Region name!!">
-
-        </div>
-        <input type="submit">
-    </form>
-    <br>
     <div class="container">
+        <form autocomplete="off" action="{{ url_for('index2') }}" method="POST">
+            <div class="autocomplete" style="width:300px;">
+                <input id="myInput" type="text" name="country" placeholder="Enter the Country/Region name!!">
+
+            </div>
+            <input type="submit">
+        </form>
+        <br>
+
         <a type="button" class="btn btn-outline-primary"
-        href="{{ url_for('world_wide') }}">To open world map</a>
+           href="{{ url_for('world_wide') }}">To open world map</a>
     </div>
 
 

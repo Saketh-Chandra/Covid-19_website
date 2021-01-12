@@ -139,5 +139,4 @@ def new_home():
 
 
 if __name__ == '__main__':
-    app.debug(True)
     app.run()
