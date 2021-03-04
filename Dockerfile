@@ -3,8 +3,8 @@ FROM python:3.8
 MAINTAINER SakethChandra "https://github.com/Saketh-Chandra/"
 
 RUN apt-get -y install git
-RUN apt-get install python3 -y
-RUN apt install python3-pip -y
+# RUN apt-get install python3 -y
+# RUN apt-get install -y python3-pip
 
 RUN git clone https://github.com/Saketh-Chandra/Covid-19_website.git
 

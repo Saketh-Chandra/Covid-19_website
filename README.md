@@ -59,7 +59,28 @@ other components where preexisting third-party libraries provide common function
 supports extensions that can add application features. 
 
 # :book: How to use the repository?
-## Setup
+
+## :gear: Setup
+
+### On Windows: 
+```cmd
+py -m pip install --user virtualenv
+py -m venv env
+.\env\Scripts\activate
+```
+
+### On macOS and Linux:
+```bash
+python3 -m pip install --user virtualenv
+python3 -m venv env
+source env/bin/activate
+```
+### Leaving the virtual environment
+```bash
+deactivate
+```
+### After setting up virtual environment do this!
+
 ```bash
 git clone https://github.com/Saketh-Chandra/Covid-19_website.git
 cd Covid-19_website
