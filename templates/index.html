@@ -38,6 +38,9 @@
             var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
 
             chart.draw(data, options);
+            $(window).resize(function () {
+                drawBasic();
+            });
         }
     </script>
 {% endblock %}
@@ -60,10 +63,12 @@
             Graph of {{ Country }}, {{ State }}
         </div>
         <div class="card-body">
-            <div id="chart_div" style="height: auto"></div>
+
+            <div id="chart_div" style="height:auto "></div>
         </div>
     </div>
     <div>
+        <br>
         <a type="button" class="btn btn-outline-primary" href="{{ url_for('new_home', Country=Country, State=State) }}">New
             cases graph</a>
         <br>
@@ -72,6 +77,6 @@
         <a type="button" class="btn btn-outline-primary"
            href="{{ url_for('home_api', Country=Country, State=State) }}">to view API</a>
     </div>
-
+    <h>{{ last_time }}</h>
 
 {% endblock %}

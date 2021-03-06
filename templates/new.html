@@ -38,6 +38,9 @@
             var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
 
             chart.draw(data, options);
+            $(window).resize(function () {
+                drawBasic();
+            });
         }
     </script>
 {% endblock %}
@@ -48,10 +51,10 @@
     {#    <div id="chart_div" style="width: 1500px; height: 1000px"></div>#}
     <div class="card">
         <div class="card-header">
-            Graph of {{ Country }}, {{ State }}
+            Graph of {{ Country|title }}, {{ State |title }}:
         </div>
         <div class="card-body">
-            <div id="chart_div" style="width: 1000px; height: 500px"></div>
+            <div id="chart_div" style="height:auto "></div>
         </div>
     </div>
     <div>

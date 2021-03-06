@@ -94,8 +94,9 @@ def home_view():
         data_c = json.dumps(data_arr[1])
         data_r = json.dumps(data_arr[2])
         data_d = json.dumps(data_arr[3])
+        last_time = (data_arr[0][-1])
         return render_template('index.html', in_list_index=index, in_list_data_c=data_c, in_list_data_r=data_r,
-                               in_list_data_d=data_d, Country=Country, State=State)
+                               in_list_data_d=data_d, last_time=last_time, Country=Country, State=State)
     except:
         return render_template('404_error.html')
 
