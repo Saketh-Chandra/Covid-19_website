@@ -95,7 +95,7 @@ docker build -t covid_19_website .
 docker run -p 80:5000 -e port=5000 covid_19_website
 ```
 
-
+---
 
 ### Telegram Bot info:
 #### you can get information using Telegram Bot!
