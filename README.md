@@ -90,12 +90,13 @@ flask run
 ```
 ##  :whale: Docker Build
 ```bash
-wget "https://raw.githubusercontent.com/Saketh-Chandra/Covid-19_website/master/Dockerfile"
+git clone https://github.com/Saketh-Chandra/Covid-19_website.git
+cd Covid-19_website
 docker build -t covid_19_website .
 docker run -p 80:5000 -e port=5000 covid_19_website
 ```
 
-
+---
 
 ### Telegram Bot info:
 #### you can get information using Telegram Bot!
