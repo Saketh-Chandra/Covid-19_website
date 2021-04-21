@@ -13,65 +13,8 @@
     </style>
 </head>
 <body>
-{#<div class="container-fluid imgBackground">#}
-{#    <div class="row">#}
-{#        <div class="col-md-12">#}
-{#            <h3 class="text-body">#}
-{#                {{ Country }},{{ State }} - {{ index }}.#}
-{#            </h3>#}
-{#            <div class="row">#}
-{#                <div class="col-md-4">#}
-{#                    <div class="card text-white bg-warning">#}
-{#                        <h5 class="card-header">#}
-{#                            Confirmed#}
-{#                        </h5>#}
-{#                        <div class="card-body">#}
-{#                            <p class="card-text">#}
-{#                                {{ data_c }}#}
-{#                            </p>#}
-{#                        </div>#}
-{#                        <div class="card-body">#}
-{#                            <p class="card-text">#}
-{#                                {{ data_c }}#}
-{#                            </p>#}
-{#                        </div>#}
-{#                        <div class="card-body">#}
-{#                            <p class="card-text">#}
-{#                                {{ data_c }}#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#                <div class="col-md-4">#}
-{#                    <div class="card text-white bg-success">#}
-{#                        <h5 class="card-header">#}
-{#                            Recovered#}
-{#                        </h5>#}
-{#                        <div class="card-body">#}
-{#                            <p class="card-text">#}
-{#                                {{ data_r }}#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#                <div class="col-md-4">#}
-{#                    <div class="card text-white bg-danger">#}
-{#                        <h5 class="card-header">#}
-{#                            Deaths#}
-{#                        </h5>#}
-{#                        <div class="card-body">#}
-{#                            <p class="card-text">#}
-{#                                {{ data_d }}#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</div>#}
 
-<div class="card" style="width: 18rem;>
+<div class="card" style="width: auto;">
     <ul class="list-group list-group-flush">
         <li class="list-group-item">{{ Country }},{{ State }} - {{ index }}.</li>
         <li class="list-group-item bg-warning">Confirmed {{ data_c }}</li>
