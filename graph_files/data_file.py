@@ -96,7 +96,7 @@ def data_of_world_wide():
 
     new = list(dfC.head())[-1]
     co = list(dfC.head(0))[1]
-    print(co, new)
+    # print(co, new)
     dC = dfC[[co, new]]
     dR = dfR[[co, new]]
 
@@ -112,6 +112,9 @@ def data_of_world_wide():
 
 
 # print(data_of_world_wide())
+
+
+
 """"
 
 if __name__=='__main__':

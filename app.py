@@ -145,5 +145,25 @@ def new_home():
                            index=json.dumps(index), Country=Country, State=State)
 
 
+@app.route('/today')
+def today_data():
+    Country = str(request.args.get('Country')).title()
+    State = str(request.args.get('State')).title()
+    if Country == "None":
+        Country = ''
+        State = ''
+    if State == "None":
+        State = ''
+
+    data_arr = data_in(Country, State)
+
+    index = data_arr[0][-1]
+    data_c = data_arr[1][-1]
+    data_r = data_arr[2][-1]
+    data_d = data_arr[3][-1]
+    # print(index, data_c, data_r, data_d)
+    return render_template('embed page.html',Country=Country,State=State, index=index, data_c=data_c, data_r=data_r, data_d=data_d)
+
+
 if __name__ == '__main__':
     app.run()
