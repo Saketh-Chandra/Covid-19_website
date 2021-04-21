@@ -141,8 +141,9 @@ def new_home():
         State = ''
     index, c, r, d = data_file.new_cases_c(Country=Country, State=State)
     # print(index[-1], c[-1], r[-1], d[-1])
+    last_time = index[-1]
     return render_template('new.html', data_c=json.dumps(c), data_r=json.dumps(r), data_d=json.dumps(d),
-                           index=json.dumps(index), Country=Country, State=State)
+                           index=json.dumps(index), Country=Country, State=State,last_time=last_time)
 
 
 @app.route('/today')
