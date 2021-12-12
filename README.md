@@ -1,4 +1,6 @@
-![Covid-19 png](https://www.leaders-in-law.com/wp-content/uploads/2020/03/COVID-19.png)
+<!--![Covid-19 png](https://www.leaders-in-law.com/wp-content/uploads/2020/03/COVID-19.png)-->
+![Covid-19 image](https://user-images.githubusercontent.com/46235445/145696472-ff0d2c81-f0c1-4827-a17b-f4df10907ffe.png)
+
 
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Saketh-Chandra/Covid-19_website)
